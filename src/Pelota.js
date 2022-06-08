@@ -24,13 +24,11 @@ class Pelota {
     }
     if (this.x <= 0) {
       this.direccionX = "derecha";
+    }  if (this.y >= ctx.canvas.width - this.ancho) {
+      this.direccionY = "arriba";
     }
     if (this.y <= 0) {
       this.direccionY = "abajo";
-    }
-    if (this.y >= ctx.canvas.width - this.ancho) {
-      this.direccionY = "arriba";
-      alert("game over");
     }
     if (this.direccionX === "derecha") {
       this.x += 10;

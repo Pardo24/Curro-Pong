@@ -22,6 +22,14 @@ const cargaInicial = () => {
         pelota.direccionY = "arriba";
       }
     }
+    else if (pelota.y > 470){
+      if (pelota.x+ pelota.ancho === pala.x){
+        pelota.direccionX= "izquierda"
+      }
+      if(pelota.x === pala.x + pala.ancho){
+        pelota.direccionX="derecha"
+      }
+    }
   };
 
   const moverPelota = () => {
